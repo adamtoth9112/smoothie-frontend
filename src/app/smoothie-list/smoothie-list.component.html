@@ -1,0 +1,26 @@
+<ul class="list-group rounded-0">
+  <div class="p-2">
+    <button
+      class="btn btn-success"
+      (click)="onNewSmoothie()"
+      *ngIf="isLoggedIn"
+    >
+      Add new
+    </button>
+  </div>
+  <div class="p-2">
+    <button class="btn btn-success" (click)="onSaveData()" *ngIf="isLoggedIn">
+      Save to server
+    </button>
+  </div>
+  <div class="p-2">
+    <button class="btn btn-success" (click)="onLogin()" *ngIf="!isLoggedIn">
+      Log in!
+    </button>
+  </div>
+  <app-smoothie-item
+    *ngFor="let s of smoothies; let i = index"
+    [smoothie]="s"
+    [index]="i"
+  ></app-smoothie-item>
+</ul>

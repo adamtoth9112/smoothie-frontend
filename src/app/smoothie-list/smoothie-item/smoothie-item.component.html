@@ -1,0 +1,20 @@
+<li
+  class="list-group-item border-0 d-flex align-items-center justify-content-between ps-0"
+>
+  <div class="p-2 bd-highlight">
+    <h5>{{ smoothie.name }}</h5>
+  </div>
+  <div class="p-2 bd-highlight">
+    <b>{{ smoothie.description }}</b>
+  </div>
+  <div class="p-2 bd-highlight">
+    <button
+      type="button"
+      class="btn btn-success ms-1"
+      [routerLink]="[index]"
+      routerLinkActive="active"
+    >
+      Details
+    </button>
+  </div>
+</li>
