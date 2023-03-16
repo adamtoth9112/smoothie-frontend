@@ -1,0 +1,22 @@
+<div class="card" style="width: 18rem; margin: auto">
+  <div class="card-body">
+    <h5 class="card-title">{{ smoothie.name }}</h5>
+    <h6 class="card-subtitle mb-2 text-muted">
+      {{ smoothie.description }}
+    </h6>
+    <ul class="list-group">
+      <li
+        class="list-group-item"
+        *ngFor="let ingredient of smoothie.ingredients"
+      >
+        {{ ingredient.name }} - {{ ingredient.amount }}
+      </li>
+    </ul>
+    <div *ngIf="isLoggedIn">
+      <a style="cursor: pointer" class="card-link" (click)="onEdit()">Edit</a>
+      <a style="cursor: pointer" class="card-link" (click)="onDelete()"
+        >Delete</a
+      >
+    </div>
+  </div>
+</div>
